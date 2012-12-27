@@ -42,7 +42,6 @@ class Author
      */
     private $isActive;
 
-
     /**
      * Get id
      *
@@ -98,4 +97,26 @@ class Author
     {
         return $this->birthdate;
     }
+
+    /**
+     * Set isActive
+     *
+     * @param boolean $isActive
+     * @return Author
+     */
+    public function setIsActive($isActive)
+    {
+        $this->isActive = $isActive;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsActive()
+    {
+        return $this->isActive;
+    }
+
+
 }
