@@ -10,9 +10,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table("student")
  * @ORM\Entity(repositoryClass="BomProfissional\ContentBundle\Entity\StudentRepository")
- * @Assert\UniqueEntity("username")
- * @Assert\UniqueEntity("email")
- * @Assert\UniqueEntity("cpf")
  */
 class Student
 {
@@ -89,9 +86,9 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="telefone", type="string", length=50)
+     * @ORM\Column(name="phone", type="string", length=50)
      */
-    private $telefone;
+    private $phone;
 
     /**
      * @var integer
@@ -324,26 +321,26 @@ class Student
     }
 
     /**
-     * Set telefone
+     * Set phone
      *
-     * @param string $telefone
+     * @param string $phone
      * @return Student
      */
-    public function setTelefone($telefone)
+    public function setPhone($phone)
     {
-        $this->telefone = $telefone;
+        $this->phone = $phone;
     
         return $this;
     }
 
     /**
-     * Get telefone
+     * Get phone
      *
      * @return string 
      */
-    public function getTelefone()
+    public function getPhone()
     {
-        return $this->telefone;
+        return $this->phone;
     }
 
     /**

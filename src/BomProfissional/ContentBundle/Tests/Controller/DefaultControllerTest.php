@@ -8,10 +8,14 @@ class DefaultControllerTest extends WebTestCase
 {
     public function testIndex()
     {
-        $client = static::createClient();
+        $this->assertTrue(true);
+    }
 
-        $crawler = $client->request('GET', '/hello/Fabien');
-
-        $this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+    public function testSeIssoEFalsoMesmo()
+    {
+        $this->assertFalse(
+            true,
+            'Mas é claro que verdadeiro não é falso'
+        );
     }
 }
