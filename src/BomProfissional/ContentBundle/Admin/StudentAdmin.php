@@ -24,7 +24,12 @@ class StudentAdmin extends Admin
             ->add('country', null, array('label' => 'País'))
             ->add('cpf', null, array('label' => 'CPF'))
             ->add('phone', null, array('label' => 'Telefone'))
-            ->add('course', 'choice', array('label' => 'Curso'))
+            ->add('course', 'entity', array(
+                    'class'    => 'BomProfissionalContentBundle:Course',
+                    'property' => 'title',
+                    'label'    => 'Curso'
+                )
+            )
             ->add('paymentDue', null, array('label' => 'Melhor data de pagamento'))
             ->add('street', null, array('label' => 'Rua'))
             ->add('cep', null, array('label' => 'CEP'))
