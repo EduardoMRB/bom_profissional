@@ -50,7 +50,7 @@ class Student
     /**
      * @var string
      *
-     * @ORM\Column(name="passwd", type="string", length=255)
+     * @ORM\Column(name="passwd", type="string", length=255, unique=true)
      */
     private $passwd;
 

@@ -10,12 +10,4 @@ class DefaultControllerTest extends WebTestCase
     {
         $this->assertTrue(true);
     }
-
-    public function testSeIssoEFalsoMesmo()
-    {
-        $this->assertFalse(
-            true,
-            'Mas é claro que verdadeiro não é falso'
-        );
-    }
 }
