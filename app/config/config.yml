@@ -98,4 +98,10 @@ services:
         class: BomProfissional\ContentBundle\Admin\StudentAdmin
         arguments: [null, BomProfissional\ContentBundle\Entity\Student, 'SonataAdminBundle:CRUD']
         tags:
-            - { name: sonata.admin, manager_type: orm, group: Content, label: Students}
+            - { name: sonata.admin, manager_type: orm, group: Academico, label: Students}
+
+    sonata.admin.course:
+        class: BomProfissional\ContentBundle\Admin\CourseAdmin
+        arguments: [null, BomProfissional\ContentBundle\Entity\Course, 'SonataAdminBundle:CRUD']
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Academico, label: Courses}
