@@ -93,7 +93,8 @@ class Student
     /**
      * @var integer
      *
-     * @ORM\Column(name="course", type="integer")
+     * @ORM\OneToOne(targetEntity="Course")
+     * @ORM\JoinColumn(name="course_id", referencedColumnName="id")
      */
     private $course;
 
